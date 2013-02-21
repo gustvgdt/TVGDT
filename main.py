@@ -6,6 +6,7 @@ from personnage import *
 from pygame.locals import *
 from constants import *
 from Projectile import *
+from hero import *
 
 def main():
 	"main function of the game: initialize models, process events, draw the view"
@@ -23,7 +24,7 @@ def main():
 	globals.map = Map('ExempleMap.txt')
 
 	# create hero
-	globals.hero = Personnage(image_path = 'charset1.png', position = [10, 10], max_life = 0, atk = 0, max_speed = 2)
+	globals.hero = Hero(image_path = 'charset1.png', position = [10, 10], max_life = 0, atk = 0, max_speed = 2)
 	screen.blit(globals.hero.image,(0,0))
 	
 	#create dragon
